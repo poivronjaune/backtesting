@@ -42,10 +42,17 @@ def show_output_examples_page():
     close_popup()
 
 
+def web_window():
+    put_row(
+        put_column([put_text("Column_1")]),
+    )
+
+
 
 def main():
     #print(f"Hello world!")
-    show_output_examples_page()
+    #show_output_examples_page()
+    web_window()
     
 
 if __name__ == "__main__":
