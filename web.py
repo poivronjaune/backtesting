@@ -41,18 +41,22 @@ def show_output_examples_page():
 
     close_popup()
 
+def action_ok():
+    popup('Action OK', 'Action OK text content', size=PopupSize.SMALL)
 
-def web_window():
-    put_row(
-        put_column([put_text("Column_1")]),
-    )
+def action_cancel():
+    popup('Action CANCEL', 'Action CANCEL text content', size=PopupSize.SMALL)
 
-
+def show_web():
+    put_grid([
+        [put_markdown(r'# ... Backtesting Strategies ...')],
+        [put_text('Column 1A'), put_text('Column 1B')],
+        [span(put_text('Column 2A with a long string of text, will it wrap or will it go to the right. I do not kow if ths is enough text to reach the end of the line but I will try'), col=2, row=1)],
+        [put_button('OK', onclick=action_ok)],
+    ], cell_width="80%")
 
 def main():
-    #print(f"Hello world!")
-    #show_output_examples_page()
-    web_window()
+    show_web()
     
 
 if __name__ == "__main__":
