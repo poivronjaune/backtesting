@@ -8,8 +8,6 @@ import matplotlib.pyplot as plt
 import pandas_ta as ta
 import backtrader as bt
 
-import gui as GUI
-
 from datetime import datetime, timedelta 
 from strategy_01 import *
 
@@ -128,7 +126,7 @@ def main(show_gui=False):
   print('\n\nStarting Portfolio Value: %.2f' % cerebro.broker.getvalue())
   
   # SETUP a strategy to run on our data
-  cerebro.addstrategy(strategy_01, 
+  cerebro.addstrategy(Strategy01, 
     start_historical_data=start_of_price_data,
     end_historical_data=end_of_price_data,
     apply_date=apply_strategy_on, 

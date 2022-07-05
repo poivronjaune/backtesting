@@ -3,9 +3,11 @@ import backtrader as bt
 
 from strategy_logger import *
 from custom_indicators import *
-from strategy_logger import StrategyLogger
+# from strategy_logger import StrategyLogger
+from logger import StrategyLogger
 
-class strategy_01(bt.Strategy):
+
+class Strategy01(bt.Strategy):
   # self.params or self.p (are identical)
   # Stop loss set to supertrend lower band
   short_description = '''
@@ -38,7 +40,7 @@ class strategy_01(bt.Strategy):
   def __init__(self):
     # Create defaut log files (TODO: adapt to create only when flags are true)
     if self.p.log_to_csv:
-      self.csv_logger = StrategyLogger(logname="log_01", seperator=";", strat_params=self.params)
+      self.csv_logger = StrategyLogger(logname="01", seperator=";", strat_params=self.params)
  
     # Keep a copy of the current data being processed in NEXT Loop
     self.price_data = None

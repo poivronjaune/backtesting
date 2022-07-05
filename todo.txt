@@ -1,0 +1,50 @@
+Remove CSV logging for orders
+Remove CSV loggin for trades
+Keep only Placed Trades as final logger
+Rename Strategy_logger to logger
+
+Simplyfi app.py without GUI
+Add feedback on stratup with default parameters to launch 
+
+KEEP IT SIMPLE
+
+
+
+DOCSTRINGS Best Practice
+""" Description  
+What the function does
+Arguments Description
+Return values descriptions
+Errors raised descriptions
+Optional extra notes or examples of usage
+
+"""
+
+Different format types
+Google Style      : Most popular
+Numpydoc          :
+reStructuredText
+EpyText
+
+Google Style
+"""Simple oneline description
+
+Args:
+  arg_1 (str) : description
+  arg_2 (int, optional) : description
+
+Returns:
+  bool: Optional description
+  Extra lines are not indented
+
+Raises:
+  ValueError : Include any error types that the function intentionally raises
+
+Notes:
+  See https://www.datacamp.com/community/tutorials/docstrings-python
+
+"""
+
+Retreiving docstrings
+print(the_function.__doc__)
+print(inspect.getdoc(the_function))
